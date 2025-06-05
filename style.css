@@ -1,0 +1,63 @@
+.background {
+    background-color: #01011b;
+    color: white;
+}
+.image {
+    height: 150px;
+    width: 150px;
+}
+.logoo {
+    text-align: center;
+}
+.heading {
+    font-size: 60px;
+}
+.features {
+    background-color: rgba(70, 69, 69, .2);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 5px;
+}
+.s-heading {
+    font-size: 40px;
+}
+.options {
+    text-align: center;
+}
+.prompting {
+    background-color:rgb(31, 38, 104);
+    border-radius: 10px;
+    color: white;
+    border-width: 0px;
+    font-size: 20px;
+    height: 38px;
+    align-items: center;
+    margin: 2px;
+}
+.prompting1 {
+    background-color:rgb(31, 38, 104);
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    margin: 2px;
+}
+
+.opt-bar {
+    border-radius: 10px;
+    background-color: #6b7280;
+    color: white;
+}
+.button-bg {
+    text-align: center;
+}
+.button {
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+}
+.cursor {
+    cursor: pointer;
+}
+.extra {
+    width: 340px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body class="background">
+        <div class="logoo">
+            <img src="kodeinkgplogo.png" alt="kodeinkgplogo" class="image">
+            <h1 class="heading">Expense Tracker</h1>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="features">
+                <h1 class="s-heading">Dashboard</h1>
+                <ul id="dashboard">
+                    <li onclick="totIncome()" id="income" class="cursor">Total Income</li>
+                    <li onclick="totExpense()" id="expense" class="cursor">Total Expenses</li>
+                    <li class="cursor">Balance</li>
+                </ul>
+            </div>
+            <div class="features">
+                <h1 class="s-heading">Add Transactions</h1>
+                <div class="d-flex flex-column">
+                    <div>
+                        <input type="text" id="userInput" placeholder="Name of the person" class="prompting input">
+                        <input type="text" id="amountInput" placeholder="Amount in numbers" class="prompting input">
+                        <div class="options">
+                            <select name="categorise" id="categorization" class="opt-bar">
+                                <option value="food"> For Food</option>
+                                <option value="utilities">For Utilities</option>
+                                <option value="entertainment">For Entertainment</option>
+                                <option value="salary">Salary</option>
+                            </select>
+                            <select name="mySelect" id="mySelect" class="opt-bar">
+                                <option value="received">received by you</option>
+                                <option value="spent">spent by you</option>
+                            </select>
+                            
+                        </div>
+                        <div class="options">
+                            <input type="text" id="date" placeholder="Date(DD/MM/YYYY)" class="prompting1 input">
+                        </div>
+                    </div>
+                    <div class="button-bg">
+                        <button onclick="storeInput()" class="btn btn-primary button">Submit</button>
+                    </div>
+                    <div>
+                        <h2>Stored Values:</h2>
+                        <ul id="displayList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="features">
+                <h1 class="s-heading">Edit/Delete Transactions</h1>
+                <div class="button-bg">
+                    <input type="text" id="Name" placeholder="Transaction serial no. in 'Stored Values'" class="prompting input extra">
+                    <button onclick="searchDetails()" class="btn btn-primary button">Submit</button>
+                </div>
+                <div>
+                    <h2>Results:</h2>
+                    <ul id="Details"></ul>
+                    <div class="button-bg">
+                        <button onclick="editTransaction()" class="btn btn-primary button">Edit</button>
+                        <button onclick="deleteTransaction()" class="btn btn-secondary button">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="features">
+                <h1 class="s-heading">Categorization</h1>
+                <h2>Categories:</h2>
+                <ul>
+                    <li onclick="searchFood()" id="foodCategory" class="cursor">Food</li>
+                    <ol id="foodDetails"></ol>
+                    <li onclick="searchUtilities()" id="utilitiesCategory" class="cursor">Utilities</li>
+                    <ol id="utilitiesDetails"></ol>
+                    <li onclick="searchEntertainment()" id="entertainmentCategory" class="cursor">Entertainment</li>
+                    <ol id="entertainmentDetails"></ol>
+                    <li onclick="searchSalary()" id="salaryCategory" class="cursor">Salary</li>
+                    <ol id="salaryDetails"></ol>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="features">
+                <h1 class="s-heading">Filter and Search</h1>
+                <ul>
+                    <li><p onclick="filterByDate()" class="cursor">By Date</p></li>
+                    <ol id="filteringByDate"></ol>
+                    <li><p onclick="filterByCategory()" class="cursor">By Category</p></li>
+                    <ol id="filteringByCategories"></ol>
+                    <li><p onclick="filterByType()" class="cursor">By Type</p></li>
+                    <ol id="filteringByType"></ol>
+                </ul>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
